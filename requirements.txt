@@ -1,0 +1,6 @@
+numpy==1.26.4
+scipy==1.14.1
+boto3==1.35.0
+py7zr==0.22.0
+nba_api==1.4.1
+requests==2.32.3
