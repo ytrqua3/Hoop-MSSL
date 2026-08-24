@@ -18,7 +18,9 @@
 <li>Temporal Transformer: explores the relationship between different timesteps within individual possessions
 <li>Spatial Transformer: explores the relationship between different agents within individual possessions
 <li>Decoders: calculates the loss of the model using three tasks
-  i. Motion Reconstruction: MLP 128->3(x, y, v)
-  ii. Player Role Identification: MLP 128 -> 2(offense, defense)
-  iii. Contrastive learning: MLP 128 -> 128 
+  <ol>
+  <li>Motion Reconstruction: MLP 128->3(x, y, v)
+  <li>Player Role Identification: MLP 128 -> 2(offense, defense)
+  <li>Contrastive learning: MLP 128 -> 128 
+  </ol>
 </ol>
