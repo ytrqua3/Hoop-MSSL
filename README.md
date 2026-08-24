@@ -21,9 +21,9 @@
   <ol>
   <li>Motion Reconstruction: MLP 128->3(x, y, v) <br/>
     Loss: MSELoss
-  <li>Player Role Identification: MLP 128 -> 2(offense, defense) <br/>
+  <li>Player Role Identification: 1d pooling (collapse on timestep dimension),  MLP (64,11,121,128) -> (64x11x2)(offense, defense) <br/>
     Loss: Binary Cross Entropy
-  <li>Contrastive learning: MLP 128 -> 128 <br/>
+  <li>Contrastive learning: 2d pooling (collapse on agent and timestep dimension), MLP (64x11x121x128) -> (64x128) <br/>
     Loss: NTXent (measures the similarity between the two views of the same possession)
   </ol>
 <li>Custom decoders: takes in contextualized vector and peforms a task</li>
@@ -38,5 +38,4 @@
 <ul>
 <li>In the paper, the researchers categorized decoders into player-level, play-level, and action-level. Because of the difficulty in labeling actions like pick-and-role and plays like pistol and 5-out, I only trained player-level decoders. </li>
 <li>I have tested the code with small fractions of the data but didn't train the model on the whole dataset as it will take up too much credits</li>
-  
 </ul>
