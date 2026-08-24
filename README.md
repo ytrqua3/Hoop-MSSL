@@ -19,8 +19,18 @@
 <li>Spatial Transformer: explores the relationship between different agents within individual possessions
 <li>Decoders: calculates the loss of the model using three tasks
   <ol>
-  <li>Motion Reconstruction: MLP 128->3(x, y, v)
-  <li>Player Role Identification: MLP 128 -> 2(offense, defense)
-  <li>Contrastive learning: MLP 128 -> 128 
+  <li>Motion Reconstruction: MLP 128->3(x, y, v) <br/>
+    Loss: MSELoss
+  <li>Player Role Identification: MLP 128 -> 2(offense, defense) <br/>
+    Loss: Binary Cross Entropy
+  <li>Contrastive learning: MLP 128 -> 128 <br/>
+    Loss: NTXent (measures the similarity between the two views of the same possession)
   </ol>
 </ol>
+
+<h2>Final Notes</h2>
+<ul>
+<li>In the paper, the researchers categorized decoders into player-level, play-level, and action-level. Because of the difficulty in labeling actions like pick-and-role and plays like pistol and 5-out, I only trained player-level decoders. </li>
+<li>I have tested the code with small fractions of the data but didn't train the model on the whole dataset as it will take up too much credits</li>
+  
+</ul>
