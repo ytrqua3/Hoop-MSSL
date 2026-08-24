@@ -26,6 +26,12 @@
   <li>Contrastive learning: MLP 128 -> 128 <br/>
     Loss: NTXent (measures the similarity between the two views of the same possession)
   </ol>
+<li>Custom decoders: takes in contextualized vector and peforms a task</li>
+  <ol>
+    <li>Player height</li>
+    <li>Player Position</li>
+    <li>All-star apperance</li>
+  </ol>
 </ol>
 
 <h2>Final Notes</h2>
